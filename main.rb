@@ -84,10 +84,10 @@ import org.jdesktop.layout.LayoutStyle
 
 frame = JFrame.new "Chatty : connected as [#{Users.local}]"
 frame.default_close_operation = JFrame::EXIT_ON_CLOSE
-frame.minimum_size = java.awt.Dimension.new(550, 430)
-frame.preferred_size = java.awt.Dimension.new(550, 430)
+frame.minimum_size = java.awt.Dimension.new(550, 330)
+frame.preferred_size = java.awt.Dimension.new(550, 330)
 
-ta_messages = javax.swing.JTextArea.new 10, 5
+ta_messages = javax.swing.JTextArea.new
 sp_messages = javax.swing.JScrollPane.new
 tf_message = javax.swing.JTextField.new
 btn_send = javax.swing.JButton.new "Send"
@@ -129,7 +129,7 @@ layout.horizontal_group = layout.createParallelGroup(GroupLayout::LEADING).
     ).addContainerGap())
 layout.vertical_group = layout.createParallelGroup(GroupLayout::LEADING).
   add(layout.createSequentialGroup().addContainerGap().
-    add(sp_messages, GroupLayout::PREFERRED_SIZE, 342, GroupLayout::PREFERRED_SIZE).
+    add(sp_messages, GroupLayout::PREFERRED_SIZE, 242, GroupLayout::PREFERRED_SIZE).
     addPreferredGap(LayoutStyle::UNRELATED).
     add(layout.createParallelGroup(GroupLayout::BASELINE).
       add(tf_message, GroupLayout::PREFERRED_SIZE, GroupLayout::DEFAULT_SIZE, GroupLayout::PREFERRED_SIZE).
